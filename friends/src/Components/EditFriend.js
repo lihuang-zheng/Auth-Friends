@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import { axiosWithAuth } from "../Utils/axiosWithAuth";
 
 const EditFriend = props => {
-  const [Name, setName] = useState(props.name);
+  const [name, setName] = useState(props.name);
   const [age, setAge] = useState(props.age);
   const [email, setEmail] = useState(props.email);
   const [id, setId] = useState(props.id);
+
+  console.log(name, age, email, id);
 
   // handle name changes
   const handleName = e => {
@@ -70,3 +72,5 @@ const EditFriend = props => {
     </div>
   );
 };
+
+export default EditFriend;
