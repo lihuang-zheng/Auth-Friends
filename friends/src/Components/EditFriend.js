@@ -7,9 +7,9 @@ const EditFriend = props => {
   const [name, setName] = useState(props.name);
   const [age, setAge] = useState(props.age);
   const [email, setEmail] = useState(props.email);
-  const [id, setId] = useState(props.id);
+  //   const [id, setId] = useState(props.id);
 
-  console.log(name, age, email, id);
+  //   console.log(name, age, email, id);
 
   // handle name changes
   const handleName = e => {
@@ -29,7 +29,7 @@ const EditFriend = props => {
     e.preventDefault();
 
     axiosWithAuth()
-      .put("/api/friends/${id}", {
+      .put(`/api/friends/${props.id}`, {
         name: name,
         age: age,
         email: email

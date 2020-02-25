@@ -54,7 +54,7 @@ class Friends extends React.Component {
   // remove friend by id
   removeFriend = id => {
     axiosWithAuth()
-      .delete("/api/friends/${id}")
+      .delete(`/api/friends/${id}`)
       .then(this.updateFriends())
       .catch(err => console.log(err));
   };
@@ -86,6 +86,12 @@ class Friends extends React.Component {
                 <p className="info">
                   {friend.name} (age: {friend.age})
                 </p>
+                <button
+                  onClick={() => this.removeFriend(friend.id)}
+                  className="deleteButton"
+                >
+                  X
+                </button>
               </div>
 
               <div className="friend-info">

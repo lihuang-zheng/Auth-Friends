@@ -26,7 +26,7 @@ const AddFriend = props => {
     e.preventDefault();
 
     axiosWithAuth()
-      .put("/api/friends/", {
+      .post("/api/friends/", {
         name: name,
         age: age,
         email: email
