@@ -9,7 +9,7 @@ import Friends from "./Components/Friends";
 
 // import private route and dependency
 import { BrowserRouter, Route } from "react-router-dom";
-import PrivateRoute from "./Utils/axiosWithAuth";
+import PrivateRoute from "./Components/PrivateRoute";
 
 function App() {
   return (

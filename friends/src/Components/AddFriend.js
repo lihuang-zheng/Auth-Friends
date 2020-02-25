@@ -43,7 +43,7 @@ const AddFriend = props => {
     <div className="add-friend">
       <h3 className="title">Add Friend</h3>
 
-      <form onSubmit={handleSubmit} className={add - container}>
+      <form onSubmit={handleSubmit} className="add-container">
         <input
           type="text"
           name="name"
@@ -65,7 +65,7 @@ const AddFriend = props => {
           name="email"
           value={email}
           onChange={handleEmail}
-          placeholder="Age"
+          placeholder="Email"
           className="add-input"
         />
         <button className="add-button">Submit</button>
